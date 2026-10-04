@@ -10,7 +10,7 @@ import {
 } from '@capacitor-firebase/authentication';
 import { Capacitor } from '@capacitor/core';
 import { environment } from '@env/environment';
-import { Platform } from '@ionic/angular';
+import { Platform } from '@ionic/angular/lazy';
 import { initializeApp } from 'firebase/app';
 import { Observable, ReplaySubject, Subject, lastValueFrom, take } from 'rxjs';
 
