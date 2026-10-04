@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
 import { DialogService, FirebaseAuthenticationService } from '@app/core';
 
@@ -6,6 +6,8 @@ import { DialogService, FirebaseAuthenticationService } from '@app/core';
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
+  standalone: false,
 })
 export class LoginPage implements OnInit {
   constructor(

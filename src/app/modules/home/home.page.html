@@ -12,47 +12,84 @@
     <ion-card-content>
       @if (currentUser) {
       <ion-item>
-        <ion-label position="stacked">UID</ion-label>
-        <ion-input [value]="currentUser.uid" readonly></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="stacked">Display Name</ion-label>
-        <ion-input [value]="currentUser.displayName" readonly></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="stacked">E-Mail</ion-label>
-        <ion-input [value]="currentUser.email" readonly></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="stacked">E-Mail Verified</ion-label>
-        <ion-input [value]="currentUser.emailVerified" readonly></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="stacked">Anonymous</ion-label>
         <ion-input
+          label="UID"
+          labelPlacement="stacked"
+          [value]="currentUser.uid"
+          readonly
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input
+          label="Display Name"
+          labelPlacement="stacked"
+          [value]="currentUser.displayName"
+          readonly
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input
+          label="E-Mail"
+          labelPlacement="stacked"
+          [value]="currentUser.email"
+          readonly
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input
+          label="E-Mail Verified"
+          labelPlacement="stacked"
+          [value]="currentUser.emailVerified"
+          readonly
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input
+          label="Anonymous"
+          labelPlacement="stacked"
           [value]="currentUser.isAnonymous ? 'yes' : 'no'"
           readonly
         ></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="stacked">Phone Number</ion-label>
-        <ion-input [value]="currentUser.phoneNumber" readonly></ion-input>
+        <ion-input
+          label="Phone Number"
+          labelPlacement="stacked"
+          [value]="currentUser.phoneNumber"
+          readonly
+        ></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="stacked">Photo URL</ion-label>
-        <ion-input [value]="currentUser.photoUrl" readonly></ion-input>
+        <ion-input
+          label="Photo URL"
+          labelPlacement="stacked"
+          [value]="currentUser.photoUrl"
+          readonly
+        ></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="stacked">Provider ID</ion-label>
-        <ion-input [value]="currentUser.providerId" readonly></ion-input>
+        <ion-input
+          label="Provider ID"
+          labelPlacement="stacked"
+          [value]="currentUser.providerId"
+          readonly
+        ></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="stacked">Tenant ID</ion-label>
-        <ion-input [value]="currentUser.tenantId" readonly></ion-input>
+        <ion-input
+          label="Tenant ID"
+          labelPlacement="stacked"
+          [value]="currentUser.tenantId"
+          readonly
+        ></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="stacked">ID Token</ion-label>
-        <ion-input [value]="idToken" readonly></ion-input>
+        <ion-input
+          label="ID Token"
+          labelPlacement="stacked"
+          [value]="idToken"
+          readonly
+        ></ion-input>
       </ion-item>
       }
       <ion-button expand="block" (click)="refreshCurrentUser()"
@@ -71,8 +108,12 @@
     @if (currentUser) {
     <ion-card-content>
       <ion-item>
-        <ion-label position="stacked">Language</ion-label>
-        <ion-input [(ngModel)]="languageCode" placeholder="en-US"></ion-input>
+        <ion-input
+          label="Language"
+          labelPlacement="stacked"
+          [(ngModel)]="languageCode"
+          placeholder="en-US"
+        ></ion-input>
       </ion-item>
       <ion-button expand="block" (click)="setLanguageCode(languageCode)"
         >Set Language Code</ion-button
