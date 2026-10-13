@@ -24,6 +24,17 @@
 		}
 	},
 	"cordova": {},
+	"experimental": {
+		"ios": {
+			"spm": {
+				"packageOptions": {
+					"@capacitor-firebase/authentication": {
+						"symlink": true
+					}
+				}
+			}
+		}
+	},
 	"packageClassList": [
 		"FirebaseAuthenticationPlugin",
 		"AppPlugin",
