@@ -1,8 +1,6 @@
 import UIKit
 import Capacitor
-#if RGCFA_INCLUDE_FACEBOOK
 import FBSDKCoreKit
-#endif
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
@@ -18,7 +16,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-#if RGCFA_INCLUDE_FACEBOOK
         let unhandledURLContexts = URLContexts.filter { context in
             !ApplicationDelegate.shared.application(
                 UIApplication.shared,
@@ -30,9 +27,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if !unhandledURLContexts.isEmpty {
             SceneDelegateProxy.shared.scene(scene, openURLContexts: unhandledURLContexts)
         }
-#else
-        SceneDelegateProxy.shared.scene(scene, openURLContexts: URLContexts)
-#endif
     }
 
     func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
